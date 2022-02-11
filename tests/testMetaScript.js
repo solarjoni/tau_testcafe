@@ -13,9 +13,9 @@ fixture.meta('version', '1')("First ficture")
     
     test
     .page("https://devexpress.github.io/testcafe/example/")
-    ("First Test", async t => {
+    ("Second Test", async t => {
         await t
         .typeText("#developer-name", "TAU")
-        .click("#macos")
+        .click("#windows")
         .click("#submit-button")
     })
