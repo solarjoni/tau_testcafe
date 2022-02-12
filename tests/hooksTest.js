@@ -26,3 +26,12 @@ fixture("First ficture")
         .click("#windows")
         .click("#submit-button")
     })
+
+    test
+    // .page("https://devexpress.github.io/testcafe/example/")
+    ("Third Test", async t => {
+        await t
+        .typeText("#developer-name", "TAU")
+        .click("#windows")
+        .click("#submit-button")
+    })
