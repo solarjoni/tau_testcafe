@@ -10,7 +10,7 @@ fixture("First ficture")
     test
     .meta('env', 'production')
     // .page("https://devexpress.github.io/testcafe/example/")
-    ("First Test", async t => {
+    ("first test", async t => {
         await t
         .typeText("#developer-name", "TAU")
         .click("#macos")
@@ -20,7 +20,7 @@ fixture("First ficture")
     
     test
     // .page("https://devexpress.github.io/testcafe/example/")
-    ("Second Test", async t => {
+    ("second test", async t => {
         await t
         .typeText("#developer-name", "TAU")
         .click("#windows")
@@ -29,7 +29,7 @@ fixture("First ficture")
 
     test
     // .page("https://devexpress.github.io/testcafe/example/")
-    ("Third Test", async t => {
+    ("third test", async t => {
         await t
         .typeText("#developer-name", "TAU")
         .click("#windows")

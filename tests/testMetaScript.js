@@ -1,4 +1,5 @@
-fixture.meta('version', '1')("First ficture")
+fixture
+    .meta('version', '1')("First ficture")
     .page("https://www.google.com/")
     
     test
