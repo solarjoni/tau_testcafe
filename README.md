@@ -4,3 +4,6 @@ Testcafe playground
 5.1 npx testcafe all tests
     npx testcafe chrome,safari tests
     npx testcafe all tests --skip-js-error
+5.2 npx testcafe -c 3 chrome tests // concurrent run
+    npx testcafe -c 4 safari,firefox tests // edge not supported 2022 02
+    npx testcafe chrome tests -L // Live Mode
