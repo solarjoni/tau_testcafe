@@ -16,3 +16,4 @@ Testcafe playground
         .run()
 5.4 - npx testcafe chrome:headless tests
       npx "chrome:emulation:device=iphone X" tests
+6.2 - --debug-on-fail (./tests/uploadFile.js)
