@@ -18,3 +18,4 @@ Testcafe playground
       npx "chrome:emulation:device=iphone X" tests
 6.2 - --debug-on-fail (./tests/uploadFile.js)
 6.3 - npx testcafe ./tests/screenshotDemo.js -t "third test" -s takeOnFails=true
+6.4 - --video artifacts/video --video-options failedOnly=true
