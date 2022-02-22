@@ -10,6 +10,7 @@ test('upload file test', async t => {
     await t
         .setFilesToUpload(fileUpload, '../upload/posture.jpg')
         .clearUpload(fileUpload)
+        // .debug()
         .setFilesToUpload(fileUpload, '../upload/posture.jpg')
         .click(uploadFileButton)
 })
