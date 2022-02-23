@@ -9,7 +9,8 @@ class HomePage {
         this.myAccountLink = Selector("a").withText("My account")
         this.logoutLink = Selector("a").withText("Log out")
         
-        this.currencyList = Selector("select#customerCurrency")
+        this.currencySelect = Selector("#customerCurrency")
+        this.currencyOption = this.currencySelect.find("option")
     }
 
     get productSearch() {
@@ -21,12 +22,34 @@ class HomePage {
             .typeText(this.productSearch, product)
             .wait(3000)
             .pressKey("enter")
+            .takeScreenshot()
     }
 
     async changeCurrency(currency) {
+        let num
+        if (currency == "Euro") {
+             num = 1
+        } else {
+            num = 0
+        }
         await t
-            .click(this.currencyList)
-            .click(Selector("option", { text: currency }))
+        // .setTestSpeed(0.1)
+        .click(this.currencySelect)
+        // .click(Selector("option", { text: currency })) // not working
+        // .click(Selector('option').filter("[value='Euro']")) // not working
+        .click(this.currencyOption.withText(currency))
+        // get the selected option
+        // const selectedOption = this.currencyOption
+        //     .filter((option) => {
+        //     if (option && option.selected) {
+        //         return true;
+        //     }
+        //     return false;
+        //     })
+        //     .nth(0);
+        // const selectedOptionContent = await selectedOption.textContent;
+        // await t.expect(selectedOptionContent).eql(currency)
+        await t.expect(this.currencyOption.nth(num).innerText).eql(currency)
     }
 }
 
