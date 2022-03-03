@@ -21,14 +21,14 @@ class RegisterPage {
             .click(this.dateOfBirthDayList)
             .click(DaysOption.withText(day))
     }
-    async selectDay(month) {
+    async selectMonth(month) {
         const MonthsOption = this.dateOfBirthMonthList.find("option")
         await t
             .click(this.dateOfBirthMonthList)
             .click(MonthsOption.withText(month))
     }
     
-    async selectYar(year) {
+    async selectYear(year) {
         const YearsOption = this.dateOfBirthYearList.find("option")
         await t
             .click(this.dateOfBirthYearList)
