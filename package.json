@@ -13,6 +13,6 @@
     "testcafe": "^1.18.4"
   },
   "devDependencies": {
-    "cucumber": "^6.0.5"
+    "cucumber": "latest"
   }
 }
