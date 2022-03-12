@@ -1,9 +1,8 @@
 const assert = require('assert')
 const { Given, When, Then } = require('cucumber')
 const registerpage = require("../../pages/RegisterPage")
-// const { Selector, testController } = require('testcafe')
 
-const URL = 'https://demo.nopcommerce.com/register/'
+const URL = "https://demo.nopcommerce.com/register/"
 var randomNumber = Math.floor(Math.random() * 10000)
 
 Given('I open the registration page', async function () {
@@ -30,6 +29,7 @@ await testController.typeText(registerpage.RegisterPage.LastName(), lastname)
 When('I select Date of Birth {string}', async function (day) {
 // Write code here that turns the phrase above into concrete actions
    await testController.click(registerpage.RegisterPage.DateOfBirth())
+//    await testController.click(registerpage.RegisterPage.DateOfBirth().find("option").withText(day))
    await testController.click(registerpage.RegisterPage.ListOption().withText(day))
 });
 
@@ -65,7 +65,7 @@ When('I click Register button', async function () {
     await testController.click(registerpage.RegisterPage.RegistrationButton())
 });
 
-Then('successfull message is displayed', async function () {
+Then('Successfull message is displayed', async function () {
 // Write code here that turns the phrase above into concrete actions
    await testController.expect(registerpage.RegisterPage.SuccessfullMessage().exists).ok()
 });

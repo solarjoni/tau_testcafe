@@ -3,7 +3,7 @@ const createTestCafe = require("testcafe")
 const testControllerHolder = require("./testControllerHolder")
 const { AfterAll, setDefaultTimeout, Before, After, Status } = require("cucumber")
 const errorHandling = require("./errorHandling")
-const TIMEOUT = 60000
+const TIMEOUT = 30000
 
 let isTestCafeError = false
 let attachScreenshotToReport = null
@@ -22,7 +22,7 @@ function createTestFile() {
 }
 
 function runTest(iteration, browser) {
-    createTestCafe('localhost', 1338 + iteration, 1339 + iteration)
+    createTestCafe('localhost', 1337 + iteration, 1338 + iteration)
         .then(function(tc) {
             cafeRunner = tc
             const runner = tc.createRunner()
@@ -36,6 +36,7 @@ function runTest(iteration, browser) {
                 })
         })
         .then(function(report) {
+            console.log("Reporting...")
         })
 }
 
@@ -45,8 +46,9 @@ Before(function() {
     runTest(n, this.setBrowser())
     createTestFile()
     n += 2
-    return this.waitForTestController.then(function(testController) {
-        return testController.maximizeWindow()
+    return this.waitForTestController
+        .then(function(testController) {
+        return testController //.maximizeWindow()
     })
 })
 
@@ -55,13 +57,13 @@ After(function() {
     testControllerHolder.free()
 })
 
-After(async function(testCase) {
+After(function(testCase) {
     const world = this
     if (testCase.result.status === Status.FAILED) {
         isTestCafeError = true
         attachScreenshotToReport = world.attachScreenshotToReport
         errorHandling.addErrorToController()
-        await errorHandling.ifErrorTakeScreenshot(testController)
+        errorHandling.ifErrorTakeScreenshot(testController)
     }
 })
 

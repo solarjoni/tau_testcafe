@@ -6,7 +6,7 @@ function select(selector) {
 
 exports.RegisterPage = {
     GenderButton: function() {
-        return select("gender-male")
+        return select("#gender-male")
     },
 
     FirstName: function() {
@@ -50,7 +50,7 @@ exports.RegisterPage = {
     },
 
     ListOption: function() {
-        return select('option')
+        return select("option")
     }
 }
     

@@ -29,9 +29,7 @@ function CustomWorld({ attach, parameters }) {
                     console.warn("The screenshot was not attached to the report")
                 })
         } else {
-            return new Promise((resolve) => {
-                resolve(null)
-            })
+            return new Promise.resolve(42)
         }
     }
 
