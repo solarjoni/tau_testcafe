@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx testcafe"
+    "test": "npx testcafe",
+    "cucumber": "./node_modules/.bin/cucumber-js"
   },
   "author": "",
   "license": "ISC",
