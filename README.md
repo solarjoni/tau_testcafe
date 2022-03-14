@@ -19,3 +19,4 @@ Testcafe playground
 6.2 - --debug-on-fail (./tests/uploadFile.js)
 6.3 - npx testcafe ./tests/screenshotDemo.js -t "third test" -s takeOnFails=true
 6.4 - --video artifacts/video --video-options failedOnly=true
+9.7 - npm run cucumber; node report-generator.js
