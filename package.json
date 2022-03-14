@@ -19,6 +19,7 @@
     "testcafe-reporter-html": "^1.4.6"
   },
   "devDependencies": {
+    "@applitools/eyes-testcafe": "^1.15.5",
     "@cucumber/cucumber": "^7.3.2"
   }
 }
