@@ -13,7 +13,8 @@
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "base64-img": "^1.0.4",
     "cucumber-html-reporter": "^5.5.0",
-    "testcafe": "^1.18.4"
+    "testcafe": "^1.18.4",
+    "testcafe-reporter-html": "^1.4.6"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^7.3.2"
