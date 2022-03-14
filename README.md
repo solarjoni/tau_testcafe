@@ -20,3 +20,4 @@ Testcafe playground
 6.3 - npx testcafe ./tests/screenshotDemo.js -t "third test" -s takeOnFails=true
 6.4 - --video artifacts/video --video-options failedOnly=true
 9.7 - npm run cucumber; node report-generator.js
+10.1 - npx testcafe chrome <test_file> --reporter html:report.html
