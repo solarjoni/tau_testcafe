@@ -2,3 +2,5 @@ node_modules
 screenshots
 artifacts
 reports
+report.html
+allure

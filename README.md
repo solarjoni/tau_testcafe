@@ -21,3 +21,5 @@ Testcafe playground
 6.4 - --video artifacts/video --video-options failedOnly=true
 9.7 - npm run cucumber; node report-generator.js
 10.1 - npx testcafe chrome <test_file> --reporter html:report.html
+10.2 - npx testcafe chrome <test_file> --reporter allure
+      ./node_modules/.bin/allure generate allure/allure-results --clean -o allure/allure-report && ./node_modules/.bin/allure open allure/allure-report
