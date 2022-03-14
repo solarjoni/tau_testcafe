@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "npx testcafe",
-    "cucumber": "./node_modules/.bin/cucumber-js"
+    "cucumber": "./node_modules/.bin/cucumber-js --format json:reports/cucumber_report.json"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "base64-img": "^1.0.4",
+    "cucumber-html-reporter": "^5.5.0",
     "testcafe": "^1.18.4"
   },
   "devDependencies": {
