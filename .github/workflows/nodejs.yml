@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install TestCafe from npm and Run Tests
-    - uses: DevExpress/testcafe-action@latest
+      uses: DevExpress/testcafe-action@latest
       with:
         args: "chrome ./Page_Model_Demo/test/registrationTest.js"
