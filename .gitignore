@@ -4,3 +4,4 @@ artifacts
 reports
 report.html
 allure
+.DS_Store
