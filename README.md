@@ -25,3 +25,4 @@ Testcafe playground
       ./node_modules/.bin/allure generate allure/allure-results --clean -o allure/allure-report && ./node_modules/.bin/allure open allure/allure-report
 
 13 - docker run -v ${PWD}/Page_Model_Demo:/testCafeDemo -it testcafe/testcafe firefox /testCafeDemo/test/e2eTest.js
+14 - npx testcafe remote test/setTestSpeed.js --qr-code
