@@ -6,8 +6,8 @@ jobs:
     name: Run TestCafe tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Install TestCafe from npm and Run Tests
       uses: DevExpress/testcafe-action@latest
       with:
-        args: "chrome ./Page_Model_Demo/test/registrationTest.js"
+        args: "chrome ./Page_Model_Demo/test/e2eTest.js"
