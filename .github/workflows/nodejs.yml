@@ -1,12 +1,10 @@
 name: TestCafe workflow
-
 on: [push]
 
 jobs:
   build:
     name: Run TestCafe tests
     runs-on: ubuntu-latest
-   
     steps:
     - uses: actions/checkout@v2
     - name: Install TestCafe from npm and Run Tests
