@@ -10,7 +10,7 @@ jobs:
         os: [ubuntu-latest, windows-latest]
         node: [8, 10, 12]
     steps:
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
       - uses: actions/checkout@v1
