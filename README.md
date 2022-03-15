@@ -23,3 +23,5 @@ Testcafe playground
 10.1 - npx testcafe chrome <test_file> --reporter html:report.html
 10.2 - npx testcafe chrome <test_file> --reporter allure
       ./node_modules/.bin/allure generate allure/allure-results --clean -o allure/allure-report && ./node_modules/.bin/allure open allure/allure-report
+
+13 - docker run -v ${PWD}/Page_Model_Demo:/testCafeDemo -it testcafe/testcafe firefox /testCafeDemo/test/e2eTest.js
