@@ -26,7 +26,8 @@ Testcafe playground
 
 13 - docker run -v ${PWD}/Page_Model_Demo:/testCafeDemo -it testcafe/testcafe firefox /testCafeDemo/test/e2eTest.js
 14 - npx testcafe remote test/setTestSpeed.js --qr-code
-15 - curl https://raw.githubusercontent.com/reportportal/reportportal/master/docker-compose.yml -o docker-compose.yml
+15.1 - curl https://raw.githubusercontent.com/reportportal/reportportal/master/docker-compose.yml -o docker-compose.yml
       docker-compose -p reportportal up -d --force-recreate
       chmod 777 data/elasticsearch 
       chgrp 1000 data/elasticsearch 
+15.2 npx testcafe test/setTestSpeed.js --reporter reportportal
